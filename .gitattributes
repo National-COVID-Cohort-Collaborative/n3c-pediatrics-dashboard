@@ -12,5 +12,9 @@
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text
 WebContent/downloads/myexample.svg -text
+WebContent/feeds/line_data.jsp -text
+WebContent/feeds/lines_data.jsp -text
 WebContent/index.jsp -text
+WebContent/line_graph.jsp -text
+WebContent/lines_graph.jsp -text
 /pom.xml -text
