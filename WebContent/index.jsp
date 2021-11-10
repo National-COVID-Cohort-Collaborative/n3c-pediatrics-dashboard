@@ -1,11 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
+<!DOCTYPE html>
 <html>
-<head>
-<title>N3C Pediatrics Dashboard</title>
-</head>
+<jsp:include page="head.jsp" flush="true" />
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="resources/MT.BootstrapLazyloader.js"></script>
+	<link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet">
+	<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+<script src="resources/d3.v4.min.js"></script>
+<script src="resources/d3-tip.js"></script>
+
+<style type="text/css" media="all">
+@import "resources/n3c_login_style.css";
+@import "resources/main_style.css";
+</style>
+
+<style type="text/css">
+table.dataTable thead .sorting_asc {
+	background-image: none !important;
+}
+</style>
+
 <body>
-	<h2>N3C Pediatrics Dashboard</h2>
+
+	<jsp:include page="navbar.jsp" flush="true" />
+
+	<div class="container-fluid">
+		<h2 class="header-text">
+			<img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Pediatrics Dashboard
+		</h2>
+	<h3>COVID-19 Disease Severity</h3>
+	<p>Click on an image to zoom.</p>
 	<div style="float: left; width: 50%">
-		<h3>Patient Count - All Age Groups</h3>
+		<h4>Pediatrics</h4>
+		<a href="downloads/ped_severity.svg"><img alt="test image" src="downloads/ped_severity.svg" width="100%"></a>
+	</div>
+	<div style="float: left; width: 50%">
+		<h4>Adult</h4>
+		<a href="downloads/adult_severity.svg"><img alt="test image" src="downloads/adult_severity.svg" width="100%"></a>
+	</div>
+	
+	<h3>Patient Counts Over Time</h3>
+	<div style="float: left; width: 50%">
+		<h4>Patient Count - All Age Groups</h4>
 		<div id="registration_line">
 			<jsp:include page="line_graph.jsp">
 				<jsp:param name="data_page" value="feeds/line_data.jsp" />
@@ -14,17 +62,17 @@
 		</div>
 	</div>
 	<div style="float: left; width: 50%">
-		<h3>Patient Count - By Age Group</h3>
-		<div id="registration_line2">
+		<h4>Patient Count - By Age Group</h4>
+		<div id=age_line>
 			<jsp:include page="lines_graph.jsp">
 				<jsp:param name="data_page" value="feeds/lines_data.jsp" />
-				<jsp:param name="dom_element" value="#registration_line2" />
+				<jsp:param name="dom_element" value="#age_line" />
 			</jsp:include>
 		</div>
 	</div>
-	<div style="float: left; width: 80%">
-		<p>myexample.svg test image</p>
-		<img alt="test image" src="downloads/myexample.svg" width="50%">
+</div>
+<div style="float: left; width: 100%">
+	<jsp:include page="footer.jsp" flush="true" />
 	</div>
 </body>
 </html>
