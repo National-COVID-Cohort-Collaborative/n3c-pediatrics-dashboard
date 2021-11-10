@@ -34,7 +34,9 @@
 	</div>
 	<div class="container pl-0 pr-0 small-space">
 		<div class="row justify-content-center pb-1 ml-5 mr-5">
-			<p class="text-center font-weight-lighter pr-0 pb-0 mb-1" style="font-size:10pt;">This work is supported by the National Institutes of Health's National Center for Advancing Translational Sciences,
+			<p class="text-center font-weight-lighter pr-0 pb-0 mb-1" style="font-size:10pt;">This work is supported by the National Institutes of Health's 
+			Eunice Kennedy Shriver National Institute of Child Health and Human Development (NICHD) Grant number 3R01HD105939-01S1
+			and the National Center for Advancing Translational Sciences,
 			Grant Number U24TR002306. This work is solely the responsibility of the creators and does not necessarily represent
 			the official views of the National Institutes of Health.</p>
 		</div>

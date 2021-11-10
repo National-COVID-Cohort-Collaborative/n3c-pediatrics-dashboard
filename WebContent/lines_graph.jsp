@@ -35,7 +35,7 @@
     }
     
     path.teen{
-    	stroke: #2d5985;
+    	stroke: #377eb8;
     	stroke-width:2.8px;
     }
     path.tween{
@@ -162,6 +162,12 @@
 			
 				// Labels & Current Totals
 				tween_child_svg.append("text")
+		    	.attr("transform", "translate("+(width+3)+","+y(data[data.length-1].teen)+")")
+		    	.attr("dy", ".35em")
+		    	.attr("text-anchor", "start")
+		    	.attr("class", "teen")
+		    	.text("[12,19)");
+				tween_child_svg.append("text")
 			    	.attr("transform", "translate("+(width+3)+","+y(data[data.length-1].tween)+")")
 			    	.attr("dy", ".35em")
 			    	.attr("text-anchor", "start")
@@ -173,12 +179,6 @@
 			    	.attr("text-anchor", "start")
 			    	.attr("class", "child")
 			    	.text("[1,5)");
-				tween_child_svg.append("text")
-		    	.attr("transform", "translate("+(width+3)+","+y(data[data.length-1].teen)+")")
-		    	.attr("dy", ".35em")
-		    	.attr("text-anchor", "start")
-		    	.attr("class", "teen")
-		    	.text("[12,19)");
 			
 				//.tickFormat(d3.time.format("%H")))
 			  	// Axis
@@ -222,34 +222,34 @@
 			
 				tween_child_focus.append("text")
 			    	.attr("x", 18)
-			    	.attr("y", 18)
+			    	.attr("y", 30)
 			    	.text("[5,12):");
 				
 				tween_child_focus.append("text")
 		    		.attr("x", 18)
-		    		.attr("y", 30)
+		    		.attr("y", 42)
 		    		.text("[1,5):");
 			
 				tween_child_focus.append("text")
 	    		.attr("x", 18)
-	    		.attr("y", 42)
+	    		.attr("y", 18)
 	    		.text("[12,19):");
 		
 				tween_child_focus.append("text")
+				.attr("class", "tooltip-teen")
+				.attr("x", 60)
+				.attr("y", 18);
+			
+				tween_child_focus.append("text")
 			    	.attr("class", "tooltip-tween")
 			    	.attr("x", 60)
-			    	.attr("y", 18);
+			    	.attr("y", 30);
 				
 				tween_child_focus.append("text")
 					.attr("class", "tooltip-child")
 					.attr("x", 60)
-					.attr("y", 30);
+					.attr("y", 42);
 				
-				tween_child_focus.append("text")
-				.attr("class", "tooltip-teen")
-				.attr("x", 60)
-				.attr("y", 42);
-			
 			
 				var tipBox = tween_child_svg.append("rect")
 			    	.attr("class", "overlay")
@@ -273,9 +273,9 @@
 				    //tween_focus.attr("transform", "translate(" + x(d.date) + "," + y(d.tween) + ")");
 				    tween_child_focus.attr("transform", "translate(" + x(d.date) + "," + d3.mouse(this)[1] + ")");
 				    tween_child_focus.select(".tooltip-date_child_tween").text(d.month_year_factor);
-				    tween_child_focus.select(".tooltip-teen").text(formatValue(d.teen));
-				    tween_child_focus.select(".tooltip-tween").text(formatValue(d.tween));
-				    tween_child_focus.select(".tooltip-child").text(formatValue(d.child));
+				    tween_child_focus.select(".tooltip-teen").text(tipentry(d.teen));
+				    tween_child_focus.select(".tooltip-tween").text(tipentry(d.tween));
+				    tween_child_focus.select(".tooltip-child").text(tipentry(d.child));
 				    
 				    tooltipLine.attr('stroke', 'black')
 				    	.attr("transform", "translate(" + x(d.date) + "," + 0 + ")")
@@ -284,6 +284,15 @@
 				}
 			};
 		});
+
+		function tipentry(d) {
+			formatValue = d3.format(",");
+			if (d == 0)
+				return "<20";
+			else
+			  return formatValue(d);	
+		}
+
 
 </script>
 </body>
