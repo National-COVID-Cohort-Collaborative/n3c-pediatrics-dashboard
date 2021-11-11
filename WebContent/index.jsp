@@ -30,47 +30,80 @@
 table.dataTable thead .sorting_asc {
 	background-image: none !important;
 }
+
+.centered{
+	text-align:center;
+}
+
+.large-mb{
+	margin-bottom:50px;
+}
 </style>
 
 <body>
 
 	<jsp:include page="navbar.jsp" flush="true" />
 
-	<div class="container-fluid">
-		<h2 class="header-text">
-			<img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Pediatrics Dashboard
-		</h2>
-	<h3>COVID-19 Disease Severity</h3>
-	<p>Click on an image to zoom.</p>
-	<div style="float: left; width: 50%">
-		<h4>Pediatrics</h4>
-		<a href="downloads/ped_severity.svg"><img alt="test image" src="downloads/ped_severity.svg" width="100%"></a>
-	</div>
-	<div style="float: left; width: 50%">
-		<h4>Adult</h4>
-		<a href="downloads/adult_severity.svg"><img alt="test image" src="downloads/adult_severity.svg" width="100%"></a>
-	</div>
+<div class="container-fluid">
+	<h2 class="header-text">
+		<img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Pediatrics Dashboard
+	</h2>
 	
-	<h3>Patient Counts Over Time</h3>
-	<div style="float: left; width: 50%">
-		<h4>Patient Count - All Age Groups</h4>
-		<div id="registration_line">
-			<jsp:include page="line_graph.jsp">
-				<jsp:param name="data_page" value="feeds/line_data.jsp" />
-				<jsp:param name="dom_element" value="#registration_line" />
-			</jsp:include>
+	<div class="row large-mb">
+		<div class="col-xs-12 centered">
+			<h3>COVID-19 Disease Severity</h3>
+			<p>Click on an image to zoom.</p>
+		</div>
+		<div class="col-xs-12, col-md-6">
+			<h4 class="centered">Pediatrics</h4>
+			<a href="downloads/ped_severity.svg"><img alt="test image" src="downloads/ped_severity.svg" width="100%"></a>
+		</div>
+		<div class="col-xs-12, col-md-6">
+			<h4 class="centered">Adult</h4>
+			<a href="downloads/adult_severity.svg"><img alt="test image" src="downloads/adult_severity.svg" width="100%"></a>
 		</div>
 	</div>
-	<div style="float: left; width: 50%">
-		<h4>Patient Count - By Age Group</h4>
-		<div id=age_line>
-			<jsp:include page="lines_graph.jsp">
-				<jsp:param name="data_page" value="feeds/lines_data.jsp" />
-				<jsp:param name="dom_element" value="#age_line" />
-			</jsp:include>
+	
+	<div class="row large-mb">
+		<div class="col-xs-12">
+			<h3 class="centered">Patient Counts Over Time</h3>
+		</div>
+		<div class="col-xs-12, col-md-6">
+			<h4 class="centered">Patient Count - All Age Groups</h4>
+			<div id="registration_line">
+				<jsp:include page="line_graph.jsp">
+					<jsp:param name="data_page" value="feeds/line_data.jsp" />
+					<jsp:param name="dom_element" value="#registration_line" />
+				</jsp:include>
+			</div>
+		</div>
+		<div class="col-xs-12, col-md-6">
+			<h4 class="centered">Patient Count - By Age Group</h4>
+			<div id=age_line>
+				<jsp:include page="lines_graph.jsp">
+					<jsp:param name="data_page" value="feeds/lines_data.jsp" />
+					<jsp:param name="dom_element" value="#age_line" />
+				</jsp:include>
+			</div>
+		</div>
+	</div>	
+	
+	<div class="row">
+		<div class="col-xs-12">
+			<h3 class="centered">Patient Counts Over Time</h3>
+			<div>
+				<h4 class="centered">Patient Count</h4>
+				<div id="stacked_bar">
+					<jsp:include page="stacked_bar.jsp">
+						<jsp:param name="data_page" value="feeds/stacked_bar_data.jsp" />
+						<jsp:param name="dom_element" value="#stacked_bar" />
+					</jsp:include>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+	
 <div style="float: left; width: 100%">
 	<jsp:include page="footer.jsp" flush="true" />
 	</div>

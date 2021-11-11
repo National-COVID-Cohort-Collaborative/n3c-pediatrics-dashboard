@@ -140,9 +140,9 @@ and (max-width: 1076px){
 
 
 /* The Collaborative Styling ///////////////////////////////////////////////////// */
-@media(max-width:591px){
-	#registration_line,
-	#dua_line{
-		display:none;
-	}
-}
+/* @media(max-width:591px){ */
+/* 	#registration_line, */
+/* 	#dua_line{ */
+/* 		display:none; */
+/* 	} */
+/* } */
