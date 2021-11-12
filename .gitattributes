@@ -16,6 +16,7 @@ WebContent/downloads/myexample.svg -text
 WebContent/downloads/ped_severity.svg -text
 WebContent/feeds/line_data.jsp -text
 WebContent/feeds/lines_data.jsp -text
+WebContent/feeds/patient_group.jsp -text
 WebContent/feeds/stacked_bar_data.jsp -text
 WebContent/footer.jsp -text
 WebContent/head.jsp -text
@@ -35,4 +36,5 @@ WebContent/resources/main_style.css -text
 WebContent/resources/n3c_login_style.css -text
 WebContent/resources/phenotype.js -text
 WebContent/stacked_bar.jsp -text
+WebContent/tables/patient_counts.jsp -text
 /pom.xml -text

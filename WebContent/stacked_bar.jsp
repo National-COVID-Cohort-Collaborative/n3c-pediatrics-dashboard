@@ -28,7 +28,7 @@
 				if (newWidth > 0) {
 					d3.select("${param.dom_element}").select("svg").remove();
 					stacked_width = newWidth - stacked_margin.left - stacked_margin.right;
-					stacked_height = (stacked_width/2) - stacked_margin.top - stacked_margin.bottom;
+					stacked_height = (stacked_width/1.5) - stacked_margin.top - stacked_margin.bottom;
 					draw_stacks()
 				}
 			});
@@ -99,8 +99,6 @@
 				.attr("transform", "translate(0," + stacked_height + ")")
 				.call(d3.axisBottom(x).tickFormat(function(date){
 					update = new Date(date.replace(/-/g, '\/').replace(/T.+/, ''));
-					console.log(update);
-					console.log(date.replace(/-/g, '\/').replace(/T.+/, ''));
 					month = update.getMonth();
 					if (month == 0) {
 						return d3.timeFormat('%Y')(update);

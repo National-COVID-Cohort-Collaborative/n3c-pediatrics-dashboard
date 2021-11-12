@@ -64,35 +64,13 @@ table.dataTable thead .sorting_asc {
 		</div>
 	</div>
 	
-	<div class="row large-mb">
-		<div class="col-xs-12">
-			<h3 class="centered">Patient Counts Over Time</h3>
-		</div>
-		<div class="col-xs-12, col-md-6">
-			<h4 class="centered">Patient Count - All Age Groups</h4>
-			<div id="registration_line">
-				<jsp:include page="line_graph.jsp">
-					<jsp:param name="data_page" value="feeds/line_data.jsp" />
-					<jsp:param name="dom_element" value="#registration_line" />
-				</jsp:include>
-			</div>
-		</div>
-		<div class="col-xs-12, col-md-6">
-			<h4 class="centered">Patient Count - By Age Group</h4>
-			<div id=age_line>
-				<jsp:include page="lines_graph.jsp">
-					<jsp:param name="data_page" value="feeds/lines_data.jsp" />
-					<jsp:param name="dom_element" value="#age_line" />
-				</jsp:include>
-			</div>
-		</div>
-	</div>	
-	
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12 centered">
 			<h3 class="centered">Patient Counts Over Time</h3>
+			<p>(Patient counts less than 20 have been removed.)</p>
+		</div>
+		<div class="col-xs-6">
 			<div>
-				<h4 class="centered">Patient Count</h4>
 				<div id="stacked_bar">
 					<jsp:include page="stacked_bar.jsp">
 						<jsp:param name="data_page" value="feeds/stacked_bar_data.jsp" />
@@ -100,6 +78,10 @@ table.dataTable thead .sorting_asc {
 					</jsp:include>
 				</div>
 			</div>
+		</div>
+		<div class="col-xs-6">
+			<div id="patient-group"></div>
+			<jsp:include page="tables/patient_counts.jsp"/>
 		</div>
 	</div>
 </div>
