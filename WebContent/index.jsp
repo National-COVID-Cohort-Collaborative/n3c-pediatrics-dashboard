@@ -48,7 +48,7 @@ table.dataTable thead .sorting_asc {
 	<h2 class="header-text">
 		<img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Pediatrics Dashboard
 	</h2>
-	
+	severity distributions over time, age distributions over time, viral coinfection
 	<div class="row large-mb">
 		<div class="col-xs-12 centered">
 			<h3>COVID-19 Disease Severity</h3>
