@@ -50,15 +50,33 @@ $.getJSON("feeds/patient_group.jsp", function(data){
              },
         	{ data: 'child',
               visible: true,
-           	  orderable: false
+           	  orderable: false,
+      		  render: function ( data, type, row ) {
+      		  	if (row.child == null)
+      		  		return "<20";
+      		  	else
+      		  		return row.child;
+      		  }
         	 },
           	{ data: 'tween',
         	  visible: true,
-        	  orderable: false
+        	  orderable: false,
+      		  render: function ( data, type, row ) {
+        		  	if (row.tween == null )
+        		  		return "<20";
+        		  	else
+        		  		return row.tween;
+        		  }
         	 },
           	{ data: 'teen',
         	  visible: true,
-        	  orderable: false
+        	  orderable: false,
+      		  render: function ( data, type, row ) {
+        		  	if (row.teen == null)
+        		  		return "<20";
+        		  	else
+        		  		return row.teen;
+        		  }
         	 }
     	]
 	} );

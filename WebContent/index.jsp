@@ -67,7 +67,6 @@ table.dataTable thead .sorting_asc {
 	<div class="row">
 		<div class="col-xs-12 centered">
 			<h3 class="centered">Patient Counts Over Time</h3>
-			<p>(Patient counts less than 20 have been removed.)</p>
 		</div>
 		<div class="col-xs-6">
 			<div>
@@ -78,6 +77,9 @@ table.dataTable thead .sorting_asc {
 					</jsp:include>
 				</div>
 			</div>
+		<div class="centered">
+			<p>(Patient counts less than 20 have been removed.)</p>
+		</div>
 		</div>
 		<div class="col-xs-6">
 			<div id="patient-group"></div>
