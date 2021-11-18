@@ -11,9 +11,16 @@
 .settings/org.eclipse.wst.validation.prefs -text
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text
+WebContent/age.jsp -text
+WebContent/coinfection.jsp -text
 WebContent/downloads/adult_severity.svg -text
+WebContent/downloads/all_adult_patients_20211118.svg -text
+WebContent/downloads/all_pediatric_pcr_ag_20211118.svg -text
+WebContent/downloads/hospitalzied_adult_patients_20211118.svg -text
+WebContent/downloads/hospitalzied_pediatric_pcr_ag_20211118.svg -text
 WebContent/downloads/myexample.svg -text
 WebContent/downloads/ped_severity.svg -text
+WebContent/downloads/pediatric_rsv_coinfetion_2021118.svg -text
 WebContent/feeds/line_data.jsp -text
 WebContent/feeds/lines_data.jsp -text
 WebContent/feeds/patient_group.jsp -text
@@ -35,6 +42,7 @@ WebContent/resources/d3.v4.min.js -text
 WebContent/resources/main_style.css -text
 WebContent/resources/n3c_login_style.css -text
 WebContent/resources/phenotype.js -text
+WebContent/severity.jsp -text
 WebContent/stacked_bar.jsp -text
 WebContent/tables/patient_counts.jsp -text
 /pom.xml -text

@@ -44,52 +44,85 @@ table.dataTable thead .sorting_asc {
 
 	<jsp:include page="navbar.jsp" flush="true" />
 
+	<c:set var="active_tab" value="severity"/>
+	<%  /* valueless parameters are not visible at the JSTL/EL level, so we do some scriptlet magic */
+		java.util.Enumeration names = request.getParameterNames();
+		while (names.hasMoreElements()) {
+			switch((String)names.nextElement()) {
+			case "age":
+				pageContext.setAttribute("active_tab", "age");
+				break;
+			case "coinfection":
+				pageContext.setAttribute("active_tab", "coinfection");
+				break;
+			case "severity":
+			default:
+				pageContext.setAttribute("active_tab", "severity");
+			}
+		}
+	%>
+
 <div class="container-fluid">
 	<h2 class="header-text">
 		<img src="images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Pediatrics Dashboard
 	</h2>
-	severity distributions over time, age distributions over time, viral coinfection
-	<div class="row large-mb">
-		<div class="col-xs-12 centered">
-			<h3>COVID-19 Disease Severity</h3>
-			<p>Click on an image to zoom.</p>
+
+		<ul class="nav nav-tabs" id="maintabs" style="font-size: 16px;">
+			<li <c:if test="${active_tab =='severity'}">class="active"</c:if>>
+				<a data-toggle="tab" data-src="severity.jsp" href="#severity">Severity Distributions over Time</a>
+			</li>
+			<li <c:if test="${active_tab =='age'}">class="active"</c:if>>
+				<a data-toggle="tab" data-src="age.jsp" href="#age">Age Distributions over Time</a>
+			</li>
+			<li <c:if test="${active_tab =='coinfection'}">class="active"</c:if>>
+				<a data-toggle="tab" data-src="coinfection.jsp" href="#coinfection">Viral Coinfection</a>
+			</li>
+		</ul>
+
+		<div class="tab-content" id="maintabscontent">
+			<div class="tab-pane fade <c:if test="${active_tab =='severity'}">in active</c:if>" id="severity"></div>
+			<div class="tab-pane fade <c:if test="${active_tab =='age'}">in active</c:if>" id="age"></div>
+			<div class="tab-pane fade <c:if test="${active_tab =='coinfection'}">in active</c:if>" id="coinfection"></div>
 		</div>
-		<div class="col-xs-12, col-md-6">
-			<h4 class="centered">Pediatrics</h4>
-			<a href="downloads/ped_severity.svg"><img alt="test image" src="downloads/ped_severity.svg" width="100%"></a>
-		</div>
-		<div class="col-xs-12, col-md-6">
-			<h4 class="centered">Adult</h4>
-			<a href="downloads/adult_severity.svg"><img alt="test image" src="downloads/adult_severity.svg" width="100%"></a>
-		</div>
-	</div>
 	
-	<div class="row">
-		<div class="col-xs-12 centered">
-			<h3 class="centered">Patient Counts Over Time</h3>
-		</div>
-		<div class="col-xs-6">
-			<div>
-				<div id="stacked_bar">
-					<jsp:include page="stacked_bar.jsp">
-						<jsp:param name="data_page" value="feeds/stacked_bar_data.jsp" />
-						<jsp:param name="dom_element" value="#stacked_bar" />
-					</jsp:include>
-				</div>
-			</div>
-		<div class="centered">
-			<p>(Patient counts less than 20 have been removed.)</p>
-		</div>
-		</div>
-		<div class="col-xs-6">
-			<div id="patient-group"></div>
-			<jsp:include page="tables/patient_counts.jsp"/>
-		</div>
+	<div style="float: left; width: 100%">
+		<jsp:include page="footer.jsp" flush="true" />
 	</div>
 </div>
-	
-<div style="float: left; width: 100%">
-	<jsp:include page="footer.jsp" flush="true" />
-	</div>
+	<script>
+		var crumbs = '#severity';
+
+		$(function() {
+
+			$('.nav-tabs a').each(function(index, el) {
+
+				var $this = $(this);
+				var pane = $this.attr('href');
+				var which = $this.data('src');
+
+				if (pane == '#severity')
+					$(pane).load(which);
+
+			});
+
+		});
+
+		$('.nav-tabs').on('click', 'a', function(e) {
+			e.preventDefault();
+
+			var $this = $(this);
+			var pane = $this.attr('href');
+			var which = $this.data('src');
+
+			if (!crumbs.includes(pane)) {
+				$(pane).load(which);
+				crumbs = crumbs + pane;
+				console.log({
+					pane : pane,
+					which : which
+				});
+			}
+		});
+	</script>
 </body>
 </html>
