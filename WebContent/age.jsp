@@ -13,9 +13,9 @@
 		</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
-		<p>These figures show the relative age category distribution for patients with a positive SARS-CoV-
-2 PCR or antigen test by month during the study period, children (left) versus adults (right). The 
-trendline shows monthly positive test incidence.</p>
+		<jsp:include page="caption.jsp">
+			<jsp:param value="age_all" name="tag"/>
+		</jsp:include>
 		<p></p>
 	</div>
 	<div class="col-xs-3">&nbsp;</div>
@@ -35,12 +35,9 @@ trendline shows monthly positive test incidence.</p>
 		</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
-		<p>These figures show the relative age category distribution for <b>hospitalized</b> patients with a 
-positive SARS-CoV-2 PCR or antigen test by month during the study period, children (left) 
-versus adults (right). The trendline shows monthly hospitalization incidence</p>
-		<p>Reference: B. Martin et al. Characteristics, Outcomes, and Severity Risk Factors Associated 
-With SARS-CoV-2 Infection Among Children in the US National COVID Cohort Collaborative 
-(N3C); 2021. JAMA Network Open, in press.</p>
+		<jsp:include page="caption.jsp">
+			<jsp:param value="age_hospitalized" name="tag"/>
+		</jsp:include>
 	</div>
 	</div>
 	

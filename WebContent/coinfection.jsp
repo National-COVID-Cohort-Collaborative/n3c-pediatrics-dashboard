@@ -11,7 +11,8 @@
 	</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
-		<p>This figure shows the percent of hospitalized children during each month who have positive 
-tests for SARS-CoV-2 and are also positive for respiratory syncytial virus (RSV).</p>
+		<jsp:include page="caption.jsp">
+			<jsp:param value="coinfection" name="tag"/>
+		</jsp:include>
 	</div>
 	

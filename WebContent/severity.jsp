@@ -16,18 +16,8 @@
 	</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
-		<p>These figures show the relative distribution of maximum
-			clinical severity for each patient with a positive SARS-CoV-2 test by
-			month during the study period, children (left) versus adults (right).
-			Clinical severity is according to the World Health Organization
-			Clinical Progression Scale score. Red = hospital mortality, discharge
-			to hospice, invasive ventilation, vasoactive-inotropic support, or
-			extracorporeal membrane oxygenation (ECMO). Yellow = hospitalized
-			without any of those. Dark green = Emergency Department visit. Light
-			green = outpatient visit.</p>
-		<p>Reference: B. Martin et al. Characteristics, Outcomes, and
-			Severity Risk Factors Associated With SARS-CoV-2 Infection Among
-			Children in the US National COVID Cohort Collaborative (N3C); 2021.
-			JAMA Network Open, in press.</p>
+		<jsp:include page="caption.jsp">
+			<jsp:param value="severity" name="tag"/>
+		</jsp:include>
 	</div>
 </div>
