@@ -5,11 +5,11 @@
 		</div>
 		<div class="col-xs-12, col-md-6">
 			<h4 class="centered">Pediatrics</h4>
-			<a href="downloads/all_pediatric_pcr_ag_20211118.svg"><img alt="test image" src="downloads/all_pediatric_pcr_ag_20211118.svg" width="100%"></a>
+			<a href="downloads/AllPedsPCRAg_7Dec2021.svg"><img alt="test image" src="downloads/AllPedsPCRAg_7Dec2021.svg" width="100%"></a>
 		</div>
 		<div class="col-xs-12, col-md-6">
 			<h4 class="centered">Adult</h4>
-			<a href="downloads/all_adult_patients_20211118.svg"><img alt="test image" src="downloads/all_adult_patients_20211118.svg" width="100%"></a>
+			<a href="downloads/AllAdultPCRAg_7Dec2021.svg"><img alt="test image" src="downloads/AllAdultPCRAg_7Dec2021.svg" width="100%"></a>
 		</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
@@ -27,11 +27,11 @@
 		</div>
 		<div class="col-xs-12, col-md-6">
 			<h4 class="centered">Pediatrics</h4>
-			<a href="downloads/hospitalzied_pediatric_pcr_ag_20211118.svg"><img alt="test image" src="downloads/hospitalzied_pediatric_pcr_ag_20211118.svg" width="100%"></a>
+			<a href="downloads/HospPedsPCRAgAB_7Dec2021.svg"><img alt="test image" src="downloads/HospPedsPCRAgAB_7Dec2021.svg" width="100%"></a>
 		</div>
 		<div class="col-xs-12, col-md-6">
 			<h4 class="centered">Adult</h4>
-			<a href="downloads/hospitalzied_adult_patients_20211118.svg"><img alt="test image" src="downloads/hospitalzied_adult_patients_20211118.svg" width="100%"></a>
+			<a href="downloads/HospAdultPCRAg_7Dec2021.svg"><img alt="test image" src="downloads/HospAdultPCRAg_7Dec2021.svg" width="100%"></a>
 		</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">

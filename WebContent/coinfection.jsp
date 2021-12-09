@@ -6,7 +6,7 @@
 	<div class="col-xs-3">&nbsp;</div>
 		<div class="col-xs-12, col-md-6">
 			<h4 class="centered">Pediatrics</h4>
-			<a href="downloads/pediatric_rsv_coinfetion_2021118.svg"><img alt="test image" src="downloads/pediatric_rsv_coinfetion_2021118.svg" width="100%"></a>
+			<a href="downloads/PedsRSVFlu_7Dec2021.svg"><img alt="test image" src="downloads/PedsRSVFlu_7Dec2021.svg" width="100%"></a>
 		</div>
 	</div>
 	<div class="col-xs-3">&nbsp;</div>
