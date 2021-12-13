@@ -46,9 +46,9 @@ table.dataTable thead .sorting_asc {
 
 	<c:set var="active_tab" value="severity"/>
 	<%  /* valueless parameters are not visible at the JSTL/EL level, so we do some scriptlet magic */
-		java.util.Enumeration names = request.getParameterNames();
+		java.util.Enumeration<String> names = request.getParameterNames();
 		while (names.hasMoreElements()) {
-			switch((String)names.nextElement()) {
+			switch(names.nextElement()) {
 			case "age":
 				pageContext.setAttribute("active_tab", "age");
 				break;

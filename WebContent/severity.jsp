@@ -23,8 +23,15 @@
 	<div class="col-xs-12 centered">
 	<div class="col-xs-2">&nbsp;</div>
 	<div class="col-xs-8">
-		<h4>Title?</h4>
+		<h4>Vasoactive and Mechanical Ventilation</h4>
 		<a href="downloads/PedsWhySevere_7Dec2021.svg"><img alt="test image"
 			src="downloads/PedsWhySevere_7Dec2021.svg" width="100%"></a>
+	</div>
+	<div class="col-xs-3">&nbsp;</div>
+	<div class="col-xs-6">
+		<jsp:include page="caption.jsp">
+			<jsp:param value="under_construction" name="tag"/>
+		</jsp:include>
+	</div>
 	</div>
 </div>
