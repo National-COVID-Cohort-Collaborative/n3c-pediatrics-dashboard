@@ -1,7 +1,7 @@
 	<div class="row large-mb">
 		<div class="col-xs-12 centered">
 			<h3>COVID-19 Viral Coinfections</h3>
-			<h4>Data Release Date: December 16, 2021</h4>
+		<jsp:include page="release_date.jsp"/>
 			<p>Click on the image to zoom.</p>
 		</div>
 	<div class="col-xs-3">&nbsp;</div>
