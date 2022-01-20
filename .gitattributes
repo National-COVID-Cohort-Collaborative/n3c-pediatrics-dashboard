@@ -51,6 +51,8 @@ WebContent/index.jsp -text
 WebContent/line_graph.jsp -text
 WebContent/lines_graph.jsp -text
 WebContent/navbar.jsp -text
+WebContent/plotly/adult_all_severity.html -text
+WebContent/plotly/peds_all_severity.html -text
 WebContent/release_date.jsp -text
 WebContent/resources/MT.BootstrapLazyloader.js -text
 WebContent/resources/autocomplete.css -text

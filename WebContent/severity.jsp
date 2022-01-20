@@ -15,6 +15,17 @@
 		<a href="downloads/adult_all_severity.svg"><img alt="test image"
 			src="downloads/adult_all_severity.svg" width="100%"></a>
 	</div>
+	<div class="col-xs-12 centered">
+		<h3>Plotly</h3>
+	</div>
+	<div class="col-xs-12, col-md-6">
+		<h4 class="centered">Pediatrics</h4>
+		<jsp:include page="plotly/peds_all_severity.html"/>
+	</div>
+	<div class="col-xs-12, col-md-6">
+		<h4 class="centered">Adult</h4>
+		<jsp:include page="plotly/adult_all_severity.html"/>
+	</div>
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
 		<jsp:include page="caption.jsp">
