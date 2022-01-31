@@ -14,6 +14,7 @@ WebContent/WEB-INF/web.xml -text
 WebContent/age.jsp -text
 WebContent/caption.jsp -text
 WebContent/coinfection.jsp -text
+WebContent/croup.jsp -text
 WebContent/downloads/AdultSeverityTime_7Dec2021.svg -text
 WebContent/downloads/AllAdultPCRAg_7Dec2021.svg -text
 WebContent/downloads/AllPedsPCRAg_7Dec2021.svg -text
@@ -32,6 +33,8 @@ WebContent/downloads/all_pediatric_pcr_ag_20211118.svg -text
 WebContent/downloads/co-infection_static.svg -text
 WebContent/downloads/hospitalzied_adult_patients_20211118.svg -text
 WebContent/downloads/hospitalzied_pediatric_pcr_ag_20211118.svg -text
+WebContent/downloads/map_peds_all.svg -text
+WebContent/downloads/map_peds_hosp.svg -text
 WebContent/downloads/myexample.svg -text
 WebContent/downloads/ped_severity.svg -text
 WebContent/downloads/pediatric_rsv_coinfetion_2021118.svg -text
@@ -45,6 +48,7 @@ WebContent/feeds/lines_data.jsp -text
 WebContent/feeds/patient_group.jsp -text
 WebContent/feeds/stacked_bar_data.jsp -text
 WebContent/footer.jsp -text
+WebContent/geographic.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text
