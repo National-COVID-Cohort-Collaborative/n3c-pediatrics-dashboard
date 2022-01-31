@@ -16,7 +16,7 @@
 			src="downloads/adult_all_severity.svg" width="100%"></a>
 	</div>
 	<div class="col-xs-12 centered">
-		<h3>Plotly</h3>
+		<h3>Dynamic Versions of the Above</h3>
 	</div>
 	<div class="col-xs-12, col-md-6">
 		<h4 class="centered">Pediatrics</h4>
