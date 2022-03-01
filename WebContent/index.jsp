@@ -61,6 +61,9 @@ table.dataTable thead .sorting_asc {
 			case "geographic":
 				pageContext.setAttribute("active_tab", "geographic");
 				break;
+			case "diabetes":
+				pageContext.setAttribute("active_tab", "diabetes");
+				break;
 			case "severity":
 			default:
 				pageContext.setAttribute("active_tab", "severity");
@@ -86,6 +89,9 @@ table.dataTable thead .sorting_asc {
 			<li <c:if test="${active_tab =='geographic'}">class="active"</c:if>>
 				<a data-toggle="tab" data-src="geographic.jsp" href="#geographic">Geographic Distribution of Children with COVID-19 in N3C</a>
 			</li>
+			<li <c:if test="${active_tab =='diabetes'}">class="active"</c:if>>
+				<a data-toggle="tab" data-src="diabetes.jsp" href="#diabetes">Diabetes Mellitus</a>
+			</li>
 			<li <c:if test="${active_tab =='croup'}">class="active"</c:if>>
 				<a data-toggle="tab" data-src="croup.jsp" href="#croup">Croup/Tracheitis</a>
 			</li>
@@ -96,6 +102,7 @@ table.dataTable thead .sorting_asc {
 			<div class="tab-pane fade <c:if test="${active_tab =='age'}">in active</c:if>" id="age"></div>
 			<div class="tab-pane fade <c:if test="${active_tab =='coinfection'}">in active</c:if>" id="coinfection"></div>
 			<div class="tab-pane fade <c:if test="${active_tab =='geographic'}">in active</c:if>" id="geographic"></div>
+			<div class="tab-pane fade <c:if test="${active_tab =='diabetes'}">in active</c:if>" id="diabetes"></div>
 			<div class="tab-pane fade <c:if test="${active_tab =='croup'}">in active</c:if>" id="croup"></div>
 		</div>
 	

@@ -15,6 +15,7 @@ WebContent/age.jsp -text
 WebContent/caption.jsp -text
 WebContent/coinfection.jsp -text
 WebContent/croup.jsp -text
+WebContent/diabetes.jsp -text
 WebContent/downloads/AdultSeverityTime_7Dec2021.svg -text
 WebContent/downloads/AllAdultPCRAg_7Dec2021.svg -text
 WebContent/downloads/AllPedsPCRAg_7Dec2021.svg -text
@@ -31,6 +32,8 @@ WebContent/downloads/adult_severity.svg -text
 WebContent/downloads/all_adult_patients_20211118.svg -text
 WebContent/downloads/all_pediatric_pcr_ag_20211118.svg -text
 WebContent/downloads/co-infection_static.svg -text
+WebContent/downloads/dm_count.svg -text
+WebContent/downloads/dm_percent.svg -text
 WebContent/downloads/hospitalzied_adult_patients_20211118.svg -text
 WebContent/downloads/hospitalzied_pediatric_pcr_ag_20211118.svg -text
 WebContent/downloads/map_peds_all.svg -text
@@ -43,6 +46,7 @@ WebContent/downloads/peds_all_severity.svg -text
 WebContent/downloads/peds_hosp_ab.svg -text
 WebContent/downloads/peds_hosp_pcragab.svg -text
 WebContent/downloads/peds_whysevere.svg -text
+WebContent/downloads_staging/peds_pcrag_hosp.svg -text
 WebContent/feeds/line_data.jsp -text
 WebContent/feeds/lines_data.jsp -text
 WebContent/feeds/patient_group.jsp -text
