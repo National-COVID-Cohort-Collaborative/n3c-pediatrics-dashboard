@@ -16,7 +16,7 @@
 	<div class="col-xs-3">&nbsp;</div>
 	<div class="col-xs-6">
 		<jsp:include page="caption.jsp">
-			<jsp:param value="under_construction" name="tag" />
+			<jsp:param value="diabetes" name="tag" />
 		</jsp:include>
 		<p></p>
 	</div>
